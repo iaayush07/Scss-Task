@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,83 +16,112 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
   <div class="container">
-    <main class="d-flex">
-      <section class="d-flex align-center">
+    <main class="d-flex overflow-auto">
+      <section class=" img-wrapper desktop-img-wrapper h-100">
         <!-- <img src="assets/images/bg-pattern-desktop.svg" alt="background-img"> -->
-        <img src="assets/images/illustration-woman-online-desktop.svg" alt="background-img">
-      </section >
+        <img src="assets/images/illustration-woman-online-desktop.svg" alt="background-img" class="bg-img">
+        <img src="assets/images/bg-pattern-desktop.svg" alt="bg-pattern" class="bg-pattern">
+      </section>
+      <section class="mobile-img-wrapper img-wrapper">
+        <img src="assets/images/illustration-woman-online-mobile.svg" alt="background-mobile">
+        <img src="assets/images/bg-pattern-mobile.svg" alt="bg-pattern">
+      </section>
       <section class="detail-wrapper flex-grow-1">
         <h1>FAQ</h1>
-        <div class="d-flex justify-between my-10">
-          <p>
-            How many team members can I invite?
-          </p>
-          <a class="dropdown">
-            <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
-          </a>
-          <p class="answer">
-            You can invite up to 2 additional users on the Free plan. There is no limit on 
+        <!-- 1st questions-- -->
+        <div class="wrapper d-flex flex-column my-10">
+          <label class="collapse d-flex justify-between" for="_1">
+            <p>
+              How many team members can I invite?
+            </p>
+            <a class="dropdown">
+              <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
+            </a>
+          </label>
+          <input id="_1" type="checkbox">
+          <div class="div mt-10">
+            You can invite up to 2 additional users on the Free plan. There is no limit on
             team members for the Premium plan.
-          </p>
+          </div>
         </div>
         <hr>
-        <div class="d-flex justify-between my-10">
-          <p>
-            What is the maximum file upload size?
-          </p>
-          <a class="dropdown">
-            <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
-          </a>
-          <p class="answer">
+        <!-- 2nd questions-- -->
+        <div class="wrapper d-flex flex-column my-10">
+          <label class="collapse d-flex justify-between" for="_2">
+            <p>
+              What is the maximum file upload size?
+            </p>
+            <a class="dropdown">
+              <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
+            </a>
+          </label>
+          <input id="_2" type="checkbox">
+          <div class="answer mt-10">
             No more than 2GB. All files in your account must fit your allotted storage space.
-          </p>
+          </div>
         </div>
         <hr>
-        <div class="d-flex justify-between my-10">
-          <p>
-            How do I reset my password?
-          </p>
-          <a class="dropdown">
-            <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
-          </a>
-          <p class="answer">
+        <!-- 3rd questions-- -->
+        <div class="wrapper d-flex flex-column my-10">
+          <label class="collapse d-flex justify-between" for="_3">
+            <p>
+              How do I reset my password?
+            </p>
+            <a class="dropdown">
+              <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
+            </a>
+          </label>
+          <input id="_3" type="checkbox">
+          <div class="answer mt-10">
             Click “Forgot password” from the login page or “Change password” from your profile page.
             A reset link will be emailed to you.
-          </p>
+          </div>
         </div>
         <hr>
-        <div class="d-flex justify-between my-10">
-          <p>
-            Can I cancel my subscription?
-          </p>
-          <a class="dropdown">
-            <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
-          </a>
-          <p class="answer">
+        <!-- 4th questions-- -->
+        <div class="wrapper d-flex flex-column my-10">
+          <label class="collapse d-flex justify-between" for="_4">
+            <p>
+              Can I cancel my subscription?
+            </p>
+            <a class="dropdown">
+              <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
+            </a>
+          </label>
+          <input id="_4" type="checkbox">
+          <div class="answer mt-10">
             Yes! Send us a message and we’ll process your request no questions asked.
-          </p>
+          </div>
         </div>
         <hr>
-        <div class="d-flex justify-between my-10">
-          <p>
-            Do you provide additional support?
-          </p>
-          <a class="dropdown">
-            <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
-          </a>
-          <p class="answer">
+        <!-- 5th-question -->
+        <div class="wrapper d-flex flex-column my-10">
+          <label class="collapse d-flex justify-between" for="_5">
+            <p>
+              Do you provide additional support?
+            </p>
+            <a class="dropdown">
+              <img src="assets/images/icon-arrow-down.svg" alt="arrow-down">
+            </a>
+          </label>
+          <input id="_5" type="checkbox">
+          <div class="answer mt-10">
             Chat and email support is available 24/7. Phone lines are open during normal business hours.
-          </p>
+          </div>
         </div>
         <hr>
-      </section >
-  </main>
+      </section>
+    </main>
   </div>
 </body>
+
 </html>

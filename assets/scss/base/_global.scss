@@ -1,61 +1,161 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: "Kumbh Sans";
 }
-.container{
+
+.container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: $bg-primary;
 
-    main{
+    main {
         background-color: $bg-main;
+        box-shadow: 0 45px 77px -50px #000;
         height: 70%;
         width: 80%;
         border-radius: 18px;
 
-        section{
-            height: 100%;
-        }
+
     }
-} 
-.detail-wrapper{
+}
+
+.detail-wrapper {
     margin: 60px;
-    h1{
+
+    h1 {
         margin-bottom: 30px
     }
-    .answer{
-        display: none;
+}
+
+// dropdown show hide
+.collapse {
+    cursor: pointer;
+    display: block;
+
+    &:hover>p {
+        color: #f37a5a;
     }
-    .dropdown:target ~ .answer{
-        display: block;
-    }
 }
-.h-100{
-    height: 100%;
-}
-.d-flex{
-    display: flex;
-}
-.align-center{
-    align-items: center;
-}
-.justify-between{
-    justify-content: space-between;
-}
-.my-10{
-    margin: 20px 0;
-}
-.d-none{
+
+/* hide the checkboxes */
+.wrapper>input {
     display: none;
 }
-.flex-grow-1{
+
+.wrapper>input+div {
+    display: none;
+}
+
+.wrapper>input:checked+div {
+    display: block;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    .bg-pattern {
+        position: absolute;
+        left: -570px;
+        top: -220px;
+    }
+
+    .bg-img {
+        margin-left: -80px;
+    }
+}
+
+.desktop-img-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+}
+
+.mobile-img-wrapper {
+    display: none;
+}
+
+//media query
+@media (max-width:375px) {
+    .desktop-img-wrapper {
+        display: none;
+    }
+
+    .mobile-img-wrapper {
+        display: flex;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .img-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        .bg-pattern {
+            position: absolute;
+            left: -570px;
+            top: -50%;
+        }
+
+        .bg-img {
+            margin-left: -80px;
+        }
+    }
+}
+
+//--------------helper class--------
+.h-100 {
+    height: 100%;
+}
+
+.h-30 {
+    height: 30%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.my-10 {
+    margin: 20px 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.flex-grow-1 {
     flex-grow: 1
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.overflow-auto {
+    overflow: auto;
 }
