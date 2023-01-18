@@ -24,13 +24,18 @@ body {
         height: 70%;
         width: 80%;
         border-radius: 18px;
+        overflow: hidden;
 
+        @media (max-width:768px) {
+            overflow: visible;
+        }
 
     }
 }
 
 .detail-wrapper {
     margin: 60px;
+    overflow: auto;
 
     h1 {
         margin-bottom: 30px
@@ -62,16 +67,35 @@ body {
 
 .img-wrapper {
     position: relative;
-    overflow: hidden;
 
     .bg-pattern {
         position: absolute;
         left: -570px;
-        top: -220px;
+        top: -35%;
+
+        @media (max-width:1440px) {
+            top: -45%;
+        }
     }
+
 
     .bg-img {
         margin-left: -80px;
+
+        @media (max-width:768px) {
+            position: absolute;
+            height: 200px;
+            top: -110px;
+            right: 28%;
+        }
+
+        @media (max-width:425px) {
+            right: 11%;
+        }
+
+        @media (max-width:375px) {
+            right: 7%;
+        }
     }
 }
 
@@ -79,6 +103,7 @@ body {
     display: flex;
     align-items: center;
     max-width: 50%;
+    overflow: hidden;
 }
 
 .mobile-img-wrapper {
@@ -86,34 +111,34 @@ body {
 }
 
 //media query
-@media (max-width:375px) {
+@media (max-width:768px) {
+
     .desktop-img-wrapper {
         display: none;
     }
 
     .mobile-img-wrapper {
         display: flex;
+        justify-content: center;
+        min-height: 10%;
+        position: relative;
+        overflow: visible;
+
+        .img-pattern {
+            position: absolute;
+            height: 120px;
+            top: -2%;
+        }
+
+
     }
 
     main {
         flex-direction: column;
     }
-
-    .img-wrapper {
-        position: relative;
-        overflow: hidden;
-
-        .bg-pattern {
-            position: absolute;
-            left: -570px;
-            top: -50%;
-        }
-
-        .bg-img {
-            margin-left: -80px;
-        }
-    }
 }
+
+// }
 
 //--------------helper class--------
 .h-100 {
