@@ -99,7 +99,7 @@ body {
 .desktop-img-wrapper {
   display: flex;
   align-items: center;
-  max-width: 50%;
+  min-width: 50%;
   overflow: hidden;
 }
 
